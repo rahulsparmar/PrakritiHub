@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakriti Hub | Art & Craft Studio</title>
+    <meta name="description" content="Prakriti Hub - Art & Craft Studio offering pottery, natural dyeing, and block printing workshops. Supported by Earthen ways.">
+    <meta name="keywords" content="art studio, craft workshops, pottery, natural dyeing, block printing, Hyderabad">
+    
+    <!-- Google Fonts for an elegant, earthy look -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Earthy Color Palette */
+        :root {
+            --primary: #8C5A46;      /* Terracotta / Clay */
+            --secondary: #5C6A50;    /* Olive / Forest Green */
+            --background: #F9F6F0;   /* Sand / Off-White */
+            --text-dark: #3E362E;    /* Deep Brown/Charcoal */
+            --text-light: #FFFFFF;
+            --accent: #D4A373;       /* Warm Ochre */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--background);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--background);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0dbce;
+        }
+
+        .logo {
+            font-family: 'Lora', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--secondary);
+            color: var(--text-light);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p.tagline {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .supported-by {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .supported-by strong {
+            color: var(--accent);
+        }
+
+        /* Introduction Section */
+        .intro {
+            max-width: 800px;
+            margin: 80px auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .intro h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Workshops Section */
+        .workshops {
+            background-color: white;
+            padding: 80px 20px;
+        }
+
+        .workshops-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .workshops-header h2 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+        }
+
+        .workshop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .workshop-card {
+            background-color: var(--background);
+            border-radius: 8px;
+            padding: 40px 30px;
+            text-align: center;
+            border-top: 5px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .workshop-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .workshop-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .workshop-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #714635;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer h2 {
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--text-light);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+            
+            .nav-links a {
+                margin-left: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .intro h2, .workshops-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">Prakriti Hub</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#workshops">Workshops</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="hero">
+        <h1>Welcome to Prakriti Hub</h1>
+        <p class="tagline">Reconnect with your creative roots.</p>
+        <div class="supported-by">
+            Supported by <strong>Earthen ways - Home of Art & Artisans</strong>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <section id="about" class="intro">
+        <h2>A Sanctuary for Handmade Arts</h2>
+        <p>At <strong>Prakriti Hub</strong>, we believe that true art stems from nature. Our studio is a collaborative haven where raw materials, mindful craftsmanship, and passionate creators come together.</p>
+        <p>Proudly supported by <em>Earthen ways - Home of Art & Artisans</em>, our mission is to preserve traditional crafting techniques while offering a modern, relaxing space for everyone to explore their artistic side. Whether you are a seasoned artist or holding clay for the first time, our studio provides the tools, guidance, and community to help your creativity bloom.</p>
+    </section>
+
+    <!-- Workshops Section -->
+    <section id="workshops" class="workshops">
+        <div class="workshops-header">
+            <h2>Our Upcoming Workshops</h2>
+            <p>Immerse yourself in the world of artisanal crafts led by master creators.</p>
+        </div>
+
+        <div class="workshop-grid">
+            <!-- Workshop 1 -->
+            <div class="workshop-card">
+                <div class="workshop-icon">🏺</div>
+                <h3>Earthen Pottery Making</h3>
+                <p>Learn the meditative art of wheel throwing and hand-building. Feel the earth in your hands as you mold raw clay into beautiful, functional home ceramics.</p>
+                <a href="mailto:hello@prakritihub.com?subject=Pottery Workshop Inquiry" class="btn">Learn More</a>
+            </div>
+
+            <!-- Workshop 2 -->
+            <div class="workshop-card">
+                <div class="workshop-icon">🌿</div>
+                <h3>Natural Dyeing & Textiles</h3>
+                <p>Discover the secrets of extracting colors from roots, leaves, and flowers. Create your own beautifully patterned, eco-friendly textiles using traditional techniques.</p>
+                <a href="mailto:hello@prakritihub.com?subject=Natural Dyeing Workshop Inquiry" class="btn">Learn More</a>
+            </div>
+
+            <!-- Workshop 3 -->
+            <div class="workshop-card">
+                <div class="workshop-icon">🎨</div>
+                <h3>Artisan Block Printing</h3>
+                <p>Carve your own nature-inspired designs and master the rhythmic art of Indian block printing. Bring your own canvas or use our sustainably sourced fabrics.</p>
+                <a href="mailto:hello@prakritihub.com?subject=Block Printing Workshop Inquiry" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h2>Prakriti Hub</h2>
+        <p>Supported by Earthen ways - Home of Art & Artisans</p>
+        <p style="margin-top: 20px;">
+            Email: <a href="mailto:hello@prakritihub.com">hello@prakritihub.com</a> | 
+            Phone: <a href="tel:+919876543210">+91 98765 43210</a>
+        </p>
+        <p style="margin-top: 20px;">&copy; 2026 Prakriti Hub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
